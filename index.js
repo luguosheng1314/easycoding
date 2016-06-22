@@ -9,9 +9,10 @@ var ncp=require("copy-paste");
 
 var setting,templateList=[];
 function logHelp(){
-	console.log("1.output  xxx  输出模板");
-	console.log("2.config set path=xxx 配置输出路径");
-	console.log("3.see [-l]|[-v]|[-h] 查看列表|版本|帮助文档");
+	console.log("1.output  [-html]|[-js]     templateName");
+	console.log("2.config  set path=xxx      配置输出路径");
+	console.log("3.see     [-l]|[-v]|[-h]    查看列表|版本|帮助文档");
+	console.log("4.input   [-ashtml]|[-asjs] d:\\test.html  newfileName")
 }
 //读取配置文件
 function readSettingFile(callback){
