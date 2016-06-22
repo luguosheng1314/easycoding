@@ -9,10 +9,10 @@ var ncp=require("copy-paste");
 
 var setting,templateList=[];
 function logHelp(){
-	console.log("1.output  [-html]|[-js]     templateName");
+	console.log("1.output|o  [-html]|[-js]     templateName");
 	console.log("2.config  set path=xxx      配置输出路径");
-	console.log("3.see     [-l]|[-v]|[-h]    查看列表|版本|帮助文档");
-	console.log("4.input   [-ashtml]|[-asjs] d:\\test.html  newfileName")
+	console.log("3.see|s     [-l]|[-v]|[-h]    查看列表|版本|帮助文档");
+	console.log("4.input|i   [-ashtml]|[-asjs] d:\\test.html  newfileName")
 }
 //读取配置文件
 function readSettingFile(callback){
@@ -146,6 +146,8 @@ var actionObj={
 }
 //别名
 actionObj["o"]=actionObj.output;
+actionObj["i"]=actionObj.input;
+actionObj["s"]=actionObj.see;
 
 //执行命令
 var command=process.argv;
