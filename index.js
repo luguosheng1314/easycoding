@@ -150,7 +150,8 @@ actionObj["o"]=actionObj.output;
 //执行命令
 var command=process.argv;
 var temp=actionObj;
-for(var i=2;i<command.length;i++){
+var commandStart=2;
+for(var i=commandStart;i<command.length;i++){
    temp=temp[command[i]];
    if(typeof temp=="function"){
    	  temp.apply({},command.slice(i+1));
